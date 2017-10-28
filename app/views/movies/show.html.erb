@@ -1,0 +1,34 @@
+<div class="col-md-8 col-md-offset-2 font-conten">
+
+<div class="back ">
+    <h1 class="font-title"> <strong><%= @movie.name%></strong></h1>
+  </div>
+  <div class="container">
+    <div class="field font-conten", style="text-align: left;">
+      <strong>Género:</strong>
+       <%= @movie.gender %>
+   </div>
+    <div class="field font-conten", style="text-align: left;">
+      <strong>Director:</strong>
+      <%= @movie.director%>
+    </div>
+    <div class="field font-conten", style="text-align: left;">
+      <strong>Año:</strong>
+      <%= @movie.year%>
+    </div>
+    <div class="field font-conten", style="text-align: left;">
+      <strong>descripción:</strong>
+      <%= @movie.description%>
+    </div>
+
+    <div class="field2">
+      <div id="ellink", class="filed font-button center">
+        <%= link_to "Editar", edit_movie_path(@movie), class:"btn be-red" %>
+        <%= link_to 'Volver', movies_path, class:"btn be-red" %>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

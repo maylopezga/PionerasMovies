@@ -1,0 +1,40 @@
+<%= form_with(model: movie, local: true) do |f| %>
+  <% if movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+      <% movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag(:name, "Película") %><br />
+    <%=f.text_field :name, id: :movie_name, placeholder: "Escribe el nombre de la película", class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:gender, "Género") %><br />
+    <%=f.text_field :gender, id: :movie_gender, placeholder: "Escribe el género de la pelíucla", class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:director, "Director") %><br />
+    <%=f.text_field :director, id: :movie_director, placeholder: "Escribe el director de la pelíucla", class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= label_tag(:year, "Año") %><br />
+    <%=f.number_field :year, id: :movie_year, placeholder: "Escribe el año de la pelíucla", class:"form-control"%>
+  </div>
+
+  <div class="field">
+  <%= label_tag(:description, "Descripción") %><br />
+  <%= f.text_area :description, id: :movie_description, placeholder: "Escribe los descripción de la película :) ", style:"height:250px;", class:"form-control"%>
+</div>
+  <div class="actions field center font-button">
+    <%= f.submit "Crear", class: "btn let be-red" %>
+  </div>
+<% end %>

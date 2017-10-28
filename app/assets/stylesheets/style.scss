@@ -1,0 +1,97 @@
+html, body{
+  margin: 0px;
+
+
+}
+a,a:visited{
+  color: inherit !important;
+  text-decoration: none;
+}
+.btn{
+
+  background-color: inherit;
+  border: none;
+  text-transform: uppercase;
+  text-decoration-color: red;
+  font-size: 1.2em;
+  padding: 10px 12px;
+}
+#ellink{
+  color: white;
+}
+.let{
+  color: white !important;
+}
+
+#logo{
+  font-size: 1.9em;
+}
+
+
+.be-red{
+  background-color: red;
+}
+.be-black{
+  background-color: black;
+}
+
+.white{
+  color: #ECF0F1;
+}
+.field{
+  margin-top: 1em;
+}
+.field2{
+  margin-top: 2em;
+}
+.center{
+  text-align: center;
+}
+
+.font-navagation{
+  //font-family: 'Indie Flower', cursive;
+  font-family: 'Sedgwick Ave Display', cursive;
+  //font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+}
+.font-button{
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+}
+.font-title{
+  font-family: 'Indie Flower', cursive;
+  padding: 14px 0px;
+  text-align: center;
+  align-content: center;
+  font-size: 60px;
+  color: white;
+}
+
+.font-conten{
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+}
+.form-control{
+  border: none;
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 4px 0px;
+  font-size: 0.5em;
+  color: black;
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+.no-margin{
+  margin: 0px;
+}
+.back{
+  background-color: red;
+
+}
+
+.large-padding{
+  padding: 10px 7px;
+}

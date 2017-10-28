@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<div class="col-md-8 col-md-offset-2 font-conten">
+
+  <div class="back font-title">
+    <h1 class="font-title"> <strong>¡¡PELÍCULAS!!</strong></h1>
+  </div>
+
+  <div class="col-md-10 col-md-offset-1">
+    <% @movies.each do |movie|%>
+      <div class="field center">
+        <h1 class="font-conten"><strong> <%=movie.name%></strong>  </h1>
+      </div>
+      <div class="field font-conten", style="text-align: left;">
+        <strong>Género: </strong>
+        <%= movie.gender%>
+      </div>
+      <div class="field font-conten", style="text-align: left;">
+        <strong>Director: </strong>
+        <%= movie.director%>
+      </div>
+      <div class="field font-conten", style="text-align: left;">
+        <strong>Año: </strong><%= movie.year%>
+      </div>
+      <div class="field font-conten", style="text-align: left;">
+        <strong>Descripción: </strong><%= movie.description%>
+      </div>
+    </br>
+    <div class="actions field center font-button">
+      <%= link_to 'Ver', movie, class: "btn let be-red" %>
+      <%= link_to 'Editar', edit_movie_path(movie), class: "btn let be-red" %>
+      <%= link_to 'Eliminar', movie, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn let be-red" %>
+    </div>
+
+
+
+    <%end%>
+
+  </div>
+</div>
