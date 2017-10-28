@@ -5,14 +5,20 @@ En el Gemfile agregaremos la siguiente línea.
 ```
 En la terminal corremos
 ```
-  $ gem bundle install
+$  bundle install
+
 ```
+
 Insatlemos 'Devise'
 
 ```
   $ rails generate devise:install
 ```
+Crear la root en routes
 
+```
+root to: 'movies#index'
+```
 Añadimos los mensajes en el body de 'application.html.erb'
 
 ruta -> “app/views/layouts/application.html.erb”
@@ -21,14 +27,19 @@ ruta -> “app/views/layouts/application.html.erb”
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 ```
-Agregamos la siguiente línea en el controlador de movie
 
-ruta -> "app/controllers/movise_controller.rb"
+Generamos el modelo
+```
+$ rails g devise User
+
+$ rake db:migrate
+```
+
+En el navegador podemos ver que el modelo de user ya se creó
 
 ```
-before_action :authenticate_user!, except: [:show,:index]
+http://localhost:3000/users/sign_in
 ```
-Esto nos indica que las personas que no tienen cuenta solo pueden acceder a la vista de show y de index
 
 Para generar la vista de devise corremos el siguiente comando en la consola
 
@@ -64,3 +75,12 @@ ruta -> "/app/views/partials/_navigation.html.erb"_
 <%end%>
 
 ```
+
+Agregamos la siguiente línea en el controlador de movies
+
+ruta -> "app/controllers/movise_controller.rb"
+
+```
+before_action :authenticate_user!, except: [:show,:index]
+```
+Esto nos indica que las personas que no tienen cuenta solo pueden acceder a la vista de show y de index
